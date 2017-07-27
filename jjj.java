@@ -1,15 +1,20 @@
-n=input()
-l=len(n)
-k=int(input())
-if(k>=l):
-    print('wrong input')
-else:
-    nums=[]
-    for i in n:
-        nums.append(i)
-    nums.sort()
-    re=l-k
-    new=0
-    for i in range(re):
-        new=new*10+int((nums[i]))
-    print(new)
+import java.util.Scanner;
+
+
+public class RepeatedNoInArray {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int len=sc.nextInt();
+		int a[]=new int[len];
+		for(int i=0;i<len;i++){
+			a[i]=sc.nextInt();
+		}for(int i=0;i<len;i++){
+			for(int j=1;j<len-1;j++){
+				if(a[i]==a[j]){
+					System.out.println(a[i]);
+				}
+			}
+		}
+	}
+
+}
